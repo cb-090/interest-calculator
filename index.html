@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Interest Calculator</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div id="mainpage">
+    <header>
+      <h1>Interest Calculator</h1>
+    </header>
+    <main>
+      <section id="input">
+        <article id="form">
+          <div id="progress">
+          <label for="progressbar" id="status">In Progress (0/4)</label><br>
+            <progress id="progressbar" value="0" max="4"></progress>
+          </div>
+          <p>Principal Amount: $<input id="principal"></input></p>
+          <p>Interest Rate: <input type="number" id="rate" min="0" max="100"></input>%</p>
+          <p>Times Compounded (per year): <br>
+            <input type="radio" id="annually" name="timescompounded" value="1">
+            <label for="annually">Annually</label><br>
+            <input type="radio" id="semiannually" name="timescompounded" value="2">
+            <label for="semiannually">Semiannually</label><br>
+            <input type="radio" id="quarterly" name="timescompounded" value="4">
+            <label for="quarterly">Quarterly</label><br>
+            <input type="radio" id="monthly" name="timescompounded" value="12">
+            <label for="monthly">Monthly</label><br>
+            <input type="radio" id="daily" name="timescompounded" value="365">
+            <label for="daily">Daily</label>
+          </p>
+          <p>Years: <input type="number" id="years"></input></p>
+        </article>
+      </section>
+      <section id="output">
+        <article id="result">
+        <p>Interest Earned: $<output id="interest"></output>
+        <p>$<output id="total"></output> total!
+        </article>
+        <article id="graphic">
+        <h2>This Could Be You:</h2>
+        <figure>
+        <img src="https://static.vecteezy.com/system/resources/previews/013/743/844/original/bar-graph-growth-and-up-arrow-png.png" />
+        <figcaption>Look at that funky little line go up!</figcaption>
+      </figure>
+      </article>
+      </section>
+    </main>
+    <footer>
+    <p>A basic compound interest calculator for all of your finance needs! Your <em>interest</em> would be appreciated! <br>
+      <a href="https://codesandbox.io/p/sandbox/interest-calculator-c8dyjx">Hosted on CodeSandbox</a>
+    </p>
+    </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,197 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+#mainpage {
+  display: grid;
+  grid-template: 160px auto 100px / 1fr;
+  height: 100vh;
+}
+
+h1 {
+  color: white;
+  background-color: rgb(131, 192, 177);
+  border: 5px solid rgb(83, 177, 141);
+  padding: 10px 0;
+  width: 500px;
+  border-radius: 15px;
+  text-shadow: 4px 4px 1px black;
+  font-size: 50px;
+  font-family: Montserrat;
+  transition: font-size 3s, width 3s;
+  animation: title-grow 5s;
+}
+
+h1:hover {
+  font-size: 500%;
+  width: 100%;
+}
+
+h2 {
+  background-color: antiquewhite;
+  font-size: 30px;
+  font-family: "Noto Sans";
+  border-radius: 15px;
+  border: 3px solid burlywood;
+  padding: 10px;
+  width: 300px;
+  text-align: center;
+  text-decoration: underline;
+  font-weight: normal;
+}
+
+figcaption,
+p {
+  font-family: "Noto Sans";
+  font-size: 1.3em;
+}
+
+header {
+  margin: 0;
+  padding: 10px;
+  background-color: rgb(85, 128, 129);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  display: grid;
+  grid-template: 1fr / 1fr 1fr;
+  background-image: linear-gradient(
+    rgb(94, 182, 177),
+    rgb(28, 149, 125),
+    rgb(29, 114, 113)
+  );
+  overflow-y: auto;
+}
+
+section {
+  margin: 20px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: cadetblue;
+  border: 5px solid white;
+}
+
+#input {
+  animation: slide-from-left 2s forwards;
+}
+
+#output {
+  animation: slide-from-right 2s forwards;
+}
+
+article {
+  background-color: beige;
+  padding: 20px;
+  margin: 20px;
+  border: 5px dashed burlywood;
+}
+
+#result {
+  text-align: center;
+  font-size: 1.5em;
+}
+
+#graphic {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#progress {
+  background-color: antiquewhite;
+  font-size: 1.3em;
+  font-family: "Noto Sans";
+  border-radius: 15px;
+  border: 3px solid burlywood;
+  padding: 10px;
+  width: 80%;
+}
+
+#progressbar {
+  width: 80%;
+  border-radius: 10px;
+  display: block;
+}
+
+#progressbar::-webkit-progress-bar {
+  background-color: white;
+  border-radius: 10px;
+}
+
+#progressbar::-webkit-progress-value {
+  background-color: cadetblue;
+  border-radius: 10px;
+}
+
+figure {
+  text-align: center;
+  background-color: white;
+  border: 3px solid black;
+  padding: 10px;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  color: white;
+}
+
+footer {
+  margin: 0;
+  text-align: center;
+  background-color: rgb(85, 128, 129);
+}
+
+@keyframes slide-from-left {
+  0% {
+    transform: translateX(-700px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-from-right {
+  0% {
+    transform: translateX(700px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes title-grow {
+  0% {
+    font-size: 50px;
+    width: 500px;
+  }
+  50% {
+    font-size: 500%;
+    width: 100%;
+  }
+  100% {
+    font-size: 50px;
+    width: 500px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #mainpage {
+    display: block;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+}
