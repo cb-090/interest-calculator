@@ -6,4 +6,4 @@ A basic compound interest calculator built using CSS, HTML, and JavaScript to ca
 
 Additionally equipped with a progress bar, animations on load-in and a transition when the user hovers on the title.
 
-Run the app [here](https://c8dyjx.csb.app/).
+Run the app [here](https://cb-090.github.io/interest-calculator/).
